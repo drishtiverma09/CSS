@@ -1,0 +1,72 @@
+<html> 
+<head> 
+<title>3D Transformations Example</title> 
+<style> 
+body { 
+font-family: Arial, sans-serif; 
+      text-align: center; 
+      margin: 40px; 
+      perspective: 600px; /* Important for 3D  effect */ 
+    } 
+    .container { 
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: center; 
+      gap: 20px; 
+    } 
+    .box { 
+      width: 120px; 
+      height: 120px; 
+      background: lightcoral; 
+      border: 2px solid #333; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      color: white; 
+      font-weight: bold; 
+    } 
+    .rotate3d { 
+      transform: rotateX(45deg) rotateY(30deg); 
+      background: lightseagreen; 
+    } 
+    .scale3d { 
+      transform: scale3d(1.2, 1.5, 1.2); 
+      background: lightskyblue; 
+    } 
+    .translate3d { 
+      transform: translate3d(40px, 20px, 60px); 
+      background: orange; 
+    } 
+    /* CSS does not have direct skew3d, so we simulate using skew 
+with perspective */ 
+    .skew3d { 
+      transform: perspective(400px) skewY(20deg); 
+      background: violet; 
+    } 
+    .matrix3d { 
+      /* matrix3d with simple custom values */ 
+      transform: matrix3d(1, 0, 0, 0, 
+                          0, 1, 0.3, 0, 
+                          0, 0, 1, 0, 
+                          40, 20, 50, 1); 
+      background: brown; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <h1>3D Transformations in CSS</h1> 
+  <div class="container"> 
+    <div class="box rotate3d">Rotate 3D</div> 
+    <div class="box scale3d">Scale 3D</div> 
+    <div class="box translate3d">Move 3D</div> 
+    <div class="box skew3d">Skew 3D</div> 
+    <div class="box matrix3d">Matrix3D</div> 
+<br><br><br><br> 
+<br> 
+<br> 
+<br> 
+<br> 
+  </div> 
+
+</body> 
+</html> 
